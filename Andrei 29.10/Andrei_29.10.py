@@ -1,3 +1,4 @@
+from module1 import *
 a = [0]*4
 from random import *
 from keyboard import *
@@ -144,21 +145,10 @@ if p==1:
         elif a==1 and z==2:
             print("Ты проиграл")
             c+=1
-elif p==2:
-    v1=["Камень","Ножницы","Бумага"]
-    v2=["Камень","Ножницы","Бумага"]
-    while True:
-        print("Играем? esc= выходим, enter= играем")
-        if read_key()=="esc":
-            break
-        elif read_key()=="enter":
-            p1=choice(v1)
-            print("Первый Бот: ",p1)
-            p2=choice(v2)
-            print("Второй Бот: ",p2)
-            if p1==p2:
-                print("Ничья")
-            elif p1==v1[0] and p2==v2[1] or p1==v1[2] and p2==v2[0] or p1==v1[1] and p2==v2[2]:
-                print("Выйграл 1")
-            else:
-                print("Выйграл 2")
+            
+m=start()
+if m==1:
+    bot_vs_bot(v1,v2)
+elif m==2:
+    while 1:
+        pass
